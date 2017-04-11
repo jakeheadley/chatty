@@ -12,8 +12,8 @@ app.get('/messages', function(req, res, next){
 });
 
 app.post('/messages', function (req, res, next){
-  messages.push({ message:req.body.messages, time: new Date()});
-  res.status(200).json({message:messages});
+  messages.push({ message:req.body.message, time: new Date()});
+  res.status(200).json({messages:messages});
 })
 
 app.listen(3000);
